@@ -5,6 +5,7 @@ namespace ScriptableObjects
 {
     public class Item : ScriptableObject
     {
+
         public int id;
         public string m_name;
     }

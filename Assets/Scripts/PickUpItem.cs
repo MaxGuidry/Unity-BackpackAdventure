@@ -9,7 +9,7 @@ public class PickUpItem : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.gameObject.
+            other.gameObject.GetComponent<Backpack>.addItem(this.gameObject);
         }
     }
 }

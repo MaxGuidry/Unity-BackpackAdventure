@@ -6,6 +6,7 @@ using System;
 
 public class ItemRemove : MonoBehaviour
 {
+    public Player p;
     public GameObject Prefab;
     //void Throw()
     //{
@@ -17,7 +18,12 @@ public class ItemRemove : MonoBehaviour
 
 
     //}
-
+    void Start()
+    {
+        p.health = 100;
+        p.mana = 100;
+        Player.SavePlayer(p);
+    }
     void Remove()
     {
         var nig = GetComponent<BackPackBehaviour>();
@@ -34,6 +40,14 @@ public class ItemRemove : MonoBehaviour
     void Update()
     {
 
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            p =Player.LoadPlayer();
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            Player.SavePlayer(p);
+        }
         if (Input.GetKeyDown(KeyCode.Delete))
         {
             Remove();

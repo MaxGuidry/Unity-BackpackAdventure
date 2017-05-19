@@ -1,0 +1,37 @@
+Initialize engine version: 5.6.0f3 (497a0f351392)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 960 (ID=0x1401)
+    Vendor:   NVIDIA
+    VRAM:     1969 MB
+    Driver:   21.21.13.7849
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\max.guidry\Documents\GitHub\Unity-BackpackAdventure\TestJsonBuild_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\max.guidry\Documents\GitHub\Unity-BackpackAdventure\TestJsonBuild_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\max.guidry\Documents\GitHub\Unity-BackpackAdventure\TestJsonBuild_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\max.guidry\Documents\GitHub\Unity-BackpackAdventure\TestJsonBuild_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\max.guidry\Documents\GitHub\Unity-BackpackAdventure\TestJsonBuild_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\max.guidry\Documents\GitHub\Unity-BackpackAdventure\TestJsonBuild_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\max.guidry\Documents\GitHub\Unity-BackpackAdventure\TestJsonBuild_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\max.guidry\Documents\GitHub\Unity-BackpackAdventure\TestJsonBuild_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.025 seconds
+Platform assembly: C:\Users\max.guidry\Documents\GitHub\Unity-BackpackAdventure\TestJsonBuild_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\max.guidry\Documents\GitHub\Unity-BackpackAdventure\TestJsonBuild_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3000x1920 at 0,-840
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.390098 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at BackPackBehaviour.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Setting up 6 worker threads for Enlighten.
+  Thread -> id: 20cc -> priority: 1 
+  Thread -> id: 2098 -> priority: 1 
+  Thread -> id: 1e2c -> priority: 1 
+  Thread -> id: 2bb4 -> priority: 1 
+  Thread -> id: 243c -> priority: 1 
+  Thread -> id: 1630 -> priority: 1 

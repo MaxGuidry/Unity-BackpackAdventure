@@ -9,6 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98d9d5b33fa412c4cb022f0b01e79f5c, type: 3}
-  m_Name: LootTable
+  m_Name: Infantry Loot
   m_EditorClassIdentifier: 
-  Drops: []
+  Drops:
+  - Item: {fileID: 11400000, guid: 97f08b728e58df14b92960e8d305b66e, type: 2}
+    ChanceToDrop: 0.541
+  - Item: {fileID: 11400000, guid: ad3beb625345a134bbc5e6ee8e4f8e37, type: 2}
+    ChanceToDrop: 0.217
+  - Item: {fileID: 11400000, guid: 3ec4e0b9fad03554db7025b0d78387db, type: 2}
+    ChanceToDrop: 0.869
+  randomRoll: 0.49544948

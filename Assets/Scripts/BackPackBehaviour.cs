@@ -45,9 +45,6 @@ public class BackPackBehaviour : MonoBehaviour
     {
         currentBackPack.backpackItems = Items;
     }
-
-
-
     public class OnSave : UnityEvent<BackPack, string>
     { }
 

@@ -23,9 +23,11 @@ public class BackPackBehaviour : MonoBehaviour
     {
         currentBackPack = new BackPack();
         Items = new List<Item>();
-        foreach (var i in Backpackconfig.Items)
-            AddItem(i);
-        
+        if (!Backpackconfig)
+        {
+            foreach (var i in Backpackconfig.Items)
+                AddItem(i);
+        }
     }
     private void Update()
     {
@@ -51,13 +53,13 @@ public class BackPackBehaviour : MonoBehaviour
 
     public void Load()
     {
-       currentBackPack =  LoadBackPack("BackPack");
+        currentBackPack = LoadBackPack("BackPack");
         Items = currentBackPack.backpackItems;
         onBackPackChange.Invoke(this);
     }
     public void Save()
     {
-        SaveBackPack(currentBackPack,"BackPack");
+        SaveBackPack(currentBackPack, "BackPack");
     }
     private OnSave onSave = new OnSave();
     private void SaveBackPack(BackPack bp, string fileName)
@@ -65,6 +67,8 @@ public class BackPackBehaviour : MonoBehaviour
         BackPack backpack = ScriptableObject.CreateInstance<BackPack>();
         backpack.backpackItems = bp.backpackItems;
         var json = JsonUtility.ToJson(backpack, true);
+        List<Item> lItems = new List<Item>();
+
         string path = Application.persistentDataPath;
         if (!File.Exists(path))
         {
@@ -75,15 +79,14 @@ public class BackPackBehaviour : MonoBehaviour
 
     private BackPack LoadBackPack(string fileName)
     {
-        string path = Application.persistentDataPath +"/Saves/" + fileName + ".json";
-        var json = File.ReadAllText(path);
+        string path = Application.persistentDataPath;
+        var json = File.ReadAllText(path + "/Saves/" + fileName + ".json");
         BackPack bp = ScriptableObject.CreateInstance<BackPack>();
         JsonUtility.FromJsonOverwrite(json, bp);
         if (!bp)
             bp = ScriptableObject.CreateInstance<BackPack>();
         return bp;
     }
-    
 
     public void LoadBackPackIn(BackPackConfig newBackpack)
     {
@@ -103,7 +106,7 @@ public class BackPackBehaviour : MonoBehaviour
             Items.Add(item);
             onBackPackChange.Invoke(this);
             UpdateCurrentBackPack();
-            
+
         }
     }
 
@@ -114,7 +117,7 @@ public class BackPackBehaviour : MonoBehaviour
             Items.Remove(item);
             onBackPackChange.Invoke(this);
             UpdateCurrentBackPack();
-            
+
         }
     }
 }

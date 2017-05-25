@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "BackPackAdventure.data.unityweb",
+"asmCodeUrl": "BackPackAdventure.asm.code.unityweb",
+"asmMemoryUrl": "BackPackAdventure.asm.memory.unityweb",
+"asmFrameworkUrl": "BackPackAdventure.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}

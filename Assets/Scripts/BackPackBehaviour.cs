@@ -58,7 +58,6 @@ public class BackPackBehaviour : MonoBehaviour
     {
         SaveBackPack(currentBackPack, "BackPack");
     }
-    private OnSave onSave = new OnSave();
     private void SaveBackPack(BackPack bp, string fileName)
     {
         BackPack backpack = ScriptableObject.CreateInstance<BackPack>();
@@ -85,16 +84,6 @@ public class BackPackBehaviour : MonoBehaviour
         return bp;
     }
 
-    public void LoadBackPackIn(BackPackConfig newBackpack)
-    {
-        List<Item> oldItems = new List<Item>();
-        oldItems.AddRange(Items);
-        Items.Clear();
-        foreach (var variable in newBackpack.Items)
-            AddItem(variable);
-        foreach (var variable in oldItems)
-            AddItem(variable);
-    }
 
     public void AddItem(Item item)
     {
